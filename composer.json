@@ -1,5 +1,38 @@
 {
     "require": {
-        "africastalking/africastalking": "^3.0"
-    }
+        "africastalking/africastalking": "^3.0",
+        "composer/installers": "^2.2",
+        "chartjs/chartjs": "2.7.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    },
+
+    "extra": {
+        "installer-paths": {
+            "libraries/{$name}": ["type:drupal-library"]
+        }
+    },
+
+
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "chartjs/chartjs",
+                "version": "v2.7.2",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "chartjs"
+                },
+                "dist": {
+                    "url": "https://www.chartjs.org/dist/2.7.2/Chart.bundle.js",
+                    "type": "file"
+                }
+            }
+        }
+    ]
+
 }
