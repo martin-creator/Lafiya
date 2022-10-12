@@ -1,11 +1,11 @@
 <?php
 
-include_once "./util.php";
-include_once "./models/user.php";
-include_once "./models/healthconditions.php";
-include_once "./models/subscriptionplan.php";
-include_once "./models/faq.php";
-include_once "./models/sms.php";
+include_once "../../util.php";
+include_once "../../models/user.php";
+include_once "../../models/healthconditions.php";
+include_once "../../models/subscriptionplan.php";
+include_once "../../models/faq.php";
+include_once "../../models/sms.php";
 
 class Menu
 {

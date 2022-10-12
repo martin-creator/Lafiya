@@ -1,5 +1,5 @@
 <?php
-include_once '../models/db.php';
+include_once '../../models/db.php';
 
 //$user = new User($phoneNumber); //$isRegistered = true;
 $db = new DBConnector();

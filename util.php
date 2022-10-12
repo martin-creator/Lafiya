@@ -24,3 +24,4 @@ class Util{
     static $SMS_SHORTCODE_KEYWORD = ""; //prod.
     static $COMPANY_NAME = "mDoc";
 }
+?>

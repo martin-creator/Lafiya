@@ -3,8 +3,8 @@
     require 'vendor/autoload.php';
     use AfricasTalking\SDK\AfricasTalking;
 
-    include_once './util.php';
-    include_once './models/db.php';
+    include_once '../../util.php';
+    include_once '../../models/db.php';
 
 
 class Sms{
