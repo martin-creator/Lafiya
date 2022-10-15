@@ -1,5 +1,5 @@
 <?php
-    include_once './models/db.php';
+    include_once '../models/db.php';
     $date = $_POST['date'];
     $sessionId = $_POST['sessionId'];
     $serviceCode = $_POST['serviceCode'];

@@ -1,25 +1,17 @@
 <?php
-    include_once 'db.php';
-    include_once 'sms.php';
+include_once "../models/db.php";
+include_once "../models/sms.php";
 
-   
-    $phoneNumber = $_POST['phoneNumber'];
-    $message = $_POST['message'];
+$phoneNumber = $_POST["phoneNumber"];
+$message = $_POST["message"];
 
-    print($message);
+print $message;
 
-    echo $phoneNumber;
+$db = new DBConnector();
+$pdo = $db->connectToDB();
 
-    
-   
+$sms = new Sms($phoneNumber);
 
-     $db = new DBConnector();
-     $pdo = $db->connectToDB();
-
-    $sms = new Sms($phoneNumber);
-
-    echo json_encode( $sms->sendSMS($message, $phoneNumber));
-
-    
+echo json_encode($sms->sendSMS($message, $phoneNumber));
 
 ?>

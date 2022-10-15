@@ -1,6 +1,6 @@
 
 $.ajax({
-    url: "http://localhost/healthussd/controllers/chartsdata/agedata.php",
+    url: "http://localhost/Lafayi/controllers/chartsdata/agedata.php",
     method: "GET",
     success: function (data) {
         var data = $.parseJSON(data)
