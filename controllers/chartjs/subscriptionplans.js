@@ -3,19 +3,15 @@ $.ajax({
   url: "http://localhost/healthussd/controllers/charts/data.php",
   method: "GET",
   success: function (data) {
-    var data = $.parseJSON(data) // important line
-    //data = JSON.stringify(data)
-    console.log(data);
-    //data = JSON.parse(data)
+    var data = $.parseJSON(data)
     ans = typeof data
-    console.log(ans);
 
-    var player = [];
-    var score = [];
+    var subscriptionPlans = [];
+    var numberOfSubscribers = [];
 
     for (var i in data) {
-      player.push(data[i].planName);
-      score.push(data[i].freq);
+     subscriptionPlans.push(data[i].planName);
+      numberOfSubscribers.push(data[i].freq);
     }
 
     var barColors = [
@@ -27,7 +23,7 @@ $.ajax({
     ];
 
     var chartdata = {
-      labels: player,
+      labels:subscriptionPlans,
       datasets: [
         {
           label: 'Number of Subscribers',
@@ -35,7 +31,7 @@ $.ajax({
           borderColor: barColors,
           hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
           hoverBorderColor: 'rgba(200, 200, 200, 1)',
-          data: score
+          data: numberOfSubscribers
         }
       ]
     };
