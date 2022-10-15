@@ -3,13 +3,7 @@ $.ajax({
     url: "http://localhost/healthussd/controllers/charts/healthdata.php",
     method: "GET",
     success: function (data) {
-        var data = $.parseJSON(data) // important line
-        //data = JSON.stringify(data)
-        console.log(data);
-        //data = JSON.parse(data)
-        ans = typeof data
-        console.log(ans);
-
+        var data = $.parseJSON(data)
         var healthCondition = [];
         var numberOfSubscribers = [];
 

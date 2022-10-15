@@ -4,8 +4,6 @@ $.ajax({
   method: "GET",
   success: function (data) {
     var data = $.parseJSON(data)
-    ans = typeof data
-
     var subscriptionPlans = [];
     var numberOfSubscribers = [];
 

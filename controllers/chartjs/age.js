@@ -3,71 +3,74 @@ $.ajax({
     url: "http://localhost/healthussd/controllers/charts/agedata.php",
     method: "GET",
     success: function (data) {
-        var data = $.parseJSON(data) // important line
-        //data = JSON.stringify(data)
-        console.log(data);
-        //data = JSON.parse(data)
-        ans = typeof data
-        console.log(ans);
+        var data = $.parseJSON(data) 
+        var ageRange = [];
+        var numberOfSubscribers = [];
 
-        var player = [];
-        var xValues = [];
+        for (var i in data) {
 
-            for(var i in data) {
-
-                if (data[i].age >= 18 && data[i].age <= 30 ){
-                    player.push( "18 to 30" );
-                } else if (data[i].age >= 31 && data[i].age <= 50){
-                    player.push( "31 to 50" );
-                }else{
-                    player.push( "51 to 120" );
-                }
-
-                xValues.push(data[i].freq);
+            if (data[i].age >= 18 && data[i].age <= 30) {
+                ageRange.push("18 to 30");
+            } else if (data[i].age >= 31 && data[i].age <= 50) {
+                ageRange.push("31 to 50");
+            } else {
+                ageRange.push("51 to 120");
             }
-            
-            console.log(xValues);
 
-            var barColors = [
-                "#b91d47",
-                "#00aba9",
-                "#2b5797",
-                "#e8c3b9",
-                "#1e7145"
-            ];
+            numberOfSubscribers.push(data[i].freq);
+        }
 
-            var chartdata = {
-              labels: player,
-              datasets : [
+        console.log(numberOfSubscribers);
+
+        var barColors = [
+            "#b91d47",
+            "#00aba9",
+            "#2b5797",
+            "#e8c3b9",
+            "#1e7145"
+        ];
+
+        var chartdata = {
+            labels: ageRange,
+            datasets: [
                 {
-                  label: 'Number of Subscribers',
-                  backgroundColor: barColors,
-                  borderColor: barColors,
-                  hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
-                  hoverBorderColor: 'rgba(200, 200, 200, 1)',
-                  data: xValues,
-                  
+                    label: 'Number of Subscribers',
+                    backgroundColor: barColors,
+                    borderColor: barColors,
+                    hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
+                    hoverBorderColor: 'rgba(200, 200, 200, 1)',
+                    data: numberOfSubscribers,
+
                 }
-              ]
-            };
+            ]
+        };
 
-            var agechart = $("#myage");
+        var agechart = $("#myage");
 
-            var barGraph = new Chart(agechart, {
-              type: 'bar',
-              data: chartdata,
-              options: {
+        var barGraph = new Chart(agechart, {
+            type: 'bar',
+            data: chartdata,
+            options: {
                 scales: {
+                    xAxes: [ {
+                        scaleLabel: {
+                          display: true,
+                          labelString: 'Age Range'
+                        }}],
                     yAxes: [{
                         ticks: {
                             beginAtZero: true
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Number of Subscribers'
                         }
                     }]
                 }
             }
-            });
-          },
-          error: function(data) {
-            console.log(data);
+        });
+    },
+    error: function (data) {
+        console.log(data);
     }
 });
