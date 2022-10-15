@@ -2,7 +2,9 @@
     "require": {
         "africastalking/africastalking": "^3.0",
         "composer/installers": "^2.2",
-        "chartjs/chartjs": "2.7.2"
+        "chartjs/chartjs": "2.7.2",
+        "php-flasher/flasher-toastr": "^1.7",
+        "tamtamchik/simple-flash": "^2.0"
     },
     "config": {
         "allow-plugins": {

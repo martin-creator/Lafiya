@@ -1,15 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <title>Lafayi-your health matters!</title>
 </head>
 
@@ -19,17 +19,17 @@
   <nav class="navbar navbar-expand-sm bg-dark navbar-light">
     <ul class="navbar-nav text-white">
       <li class="nav-item">
-        <a class="nav-link  text-white" href="./form.html">Dashboard</a>
+        <a class="nav-link text-white" href="./form.html">Dashboard</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link  text-white" href="./summary.html">Summary</a>
+        <a class="nav-link text-white" href="./summary.html">Summary</a>
       </li>
     </ul>
 
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link  text-white" href="#">Logout &nbsp; &nbsp;<i class="fa fa-sign-out text-white"
+          <a class="nav-link text-white" href="#">Logout &nbsp; &nbsp;<i class="fa fa-sign-out text-white"
               aria-hidden="true"></i></a>
         </li>
       </ul>
@@ -37,23 +37,23 @@
   </nav>
   <!-- Title-->
   <div>
-    <h1 class="text-center mt-3  text-white"> Welcome to the Health USSD Planet! </h1>
+    <h1 class="text-center mt-3 text-white">
+      Welcome to the Health USSD Planet!
+    </h1>
   </div>
   <div class="container mt-5">
     <div class="row">
-
-      <div class="col-md-5 card mr-5 ">
+      <div class="col-md-5 card mr-5">
         <div class="card-body">
           <div class="card-title">
-            <h3 class="text-center mt-3"> Send Message to a User </h3>
+            <h3 class="text-center mt-3">Send Message to a User</h3>
           </div>
 
-          <form class="card-text mt-3" method ="POST" action="../controllers/sendonesms.php">
+          <form class="card-text mt-3" method="POST" action="../controllers/sendonesms.php">
             <div class="form-group required">
               <label for="exampleFormControlInput1">Phone Number</label>
               <input type="tel" class="form-control" id="exampleFormControlInput1" name="phoneNumber"
-                placeholder="+25678965412" required>
-
+                placeholder="+25678965412" required />
             </div>
 
             <div class="form-group required">
@@ -63,25 +63,21 @@
             </div>
 
             <div class="form-group">
-              <button class="btn btn-danger">Send SMS </button>
+              <button class="btn btn-danger">Send SMS</button>
             </div>
           </form>
-
-
         </div>
-
-
       </div>
 
       <div class="col-md-5 card">
         <div class="card-body">
           <div class="card-title">
-            <h3 class="text-center mt-3"> Send Message to Many Users</h3>
+            <h3 class="text-center mt-3">Send Message to Many Users</h3>
           </div>
           <form class="card-text mt-3" method="POST" action="../controllers/sendmanysms.php">
             <div class="form-group">
               <label for="exampleFormControlSelect1">Health Condition</label>
-              <select class="form-control" id="exampleFormControlSelect1" name="disease" required> 
+              <select class="form-control" id="exampleFormControlSelect1" name="disease" required>
                 <option>Diabetes</option>
                 <option>Hypertention</option>
                 <option>Cancer</option>
@@ -104,7 +100,6 @@
                 <option>60</option>
                 <option>100</option>
               </select>
-
             </div>
 
             <div class="form-group">
@@ -117,17 +112,9 @@
               <button class="btn btn-danger">Send SMS</button>
             </div>
           </form>
-
-
         </div>
-
-
       </div>
-
     </div>
-
-
-
   </div>
 
   <!-- Optional JavaScript -->

@@ -32,7 +32,7 @@ foreach ($result3 as $row) {
 
 $finalData = array_merge($data1, $data2, $data3);
 
-$pdo = null;
+$db->closeDB();
 
 print json_encode($finalData);
 

@@ -51,7 +51,7 @@ foreach ($result5 as $row) {
 
 $finalData = array_merge($data1, $data2, $data3, $data4, $data5);
 
-$pdo = null;
+$db->closeDB();
 
 print json_encode($finalData);
 
