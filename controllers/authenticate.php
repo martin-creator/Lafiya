@@ -1,7 +1,7 @@
 <?php
-include_once '../models/db.php';
-
 session_start();
+
+include_once '../models/db.php';
 
 
 $db = new DBConnector();
@@ -14,7 +14,7 @@ if(ISSET($_POST['login'])){
         // $password = md5($_POST['password']);
         $password = $_POST['password'];
         $sql = "SELECT * FROM `member` WHERE `username`=? AND `password`=? ";
-        $query = $conn->prepare($sql);
+        $query = $pdo->prepare($sql);
         $query->execute(array($username,$password));
         $row = $query->rowCount();
         $fetch = $query->fetch();
@@ -33,6 +33,6 @@ if(ISSET($_POST['login'])){
             <script>window.location = 'index.php'</script>
         ";
     }
-
+}
 
 ?>
