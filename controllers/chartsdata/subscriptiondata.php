@@ -14,10 +14,6 @@ $result1 = $stmt1->fetchAll();
 $result2 = $stmt2->fetchAll();
 
 
-
-
-
-
 //loop through the returned data
 $data1 = array();
 foreach ($result1 as $row) {
