@@ -12,6 +12,10 @@ $pdo = $db->connectToDB();
 
 $sms = new Sms($phoneNumber);
 
-echo json_encode($sms->sendSMS($message, $phoneNumber));
+
+
+//echo json_encode($sms->sendSMS($message, $phoneNumber));
+echo <script> alert($sms->sendSMS($message, $phoneNumber))</script>;
+
 
 ?>

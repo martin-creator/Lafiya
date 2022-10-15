@@ -63,6 +63,7 @@ class Menu
       $response .= "5. Stroke\n";
 
       echo $response;
+      
     } elseif ($level == 4 && $textArray[3] == 1) {
       $name = $textArray[1];
       $age = $textArray[2];
@@ -213,6 +214,7 @@ class Menu
                 $result = $sms->sendSMS($msg, $user->getPhone());
       $response .=  Util::$GO_BACK . " " . "GO BACK \n";
       echo $response;
+
     } elseif ($level == 2 && $textArray[1] == 2) {
       $response = "CON You will receive the answer to your question via SMS shortly\n";
       $msg =  FAQ::$Question2;
@@ -227,6 +229,7 @@ class Menu
                 $result = $sms->sendSMS($msg, $user->getPhone());
       $response .= Util::$GO_BACK . " " . "GO BACK \n";
       echo $response;
+
     } elseif ($level == 2 && $textArray[1] == 4) {
       $response = "CON You will receive the answer to your question via SMS shortly\n";
       $msg =  FAQ::$Question4;
@@ -234,6 +237,7 @@ class Menu
                 $result = $sms->sendSMS($msg, $user->getPhone());
       $response .= Util::$GO_BACK . " " . "GO BACK \n";
       echo $response;
+
     } elseif ($level == 2 && $textArray[1] == 5) {
       $response = "CON You will receive the answer to your question via SMS shortly\n";
       $msg =  FAQ::$Question5;
@@ -241,6 +245,7 @@ class Menu
                 $result = $sms->sendSMS($msg, $user->getPhone());
       $response .= Util::$GO_BACK . " " . "GO BACK \n";
       echo $response;
+
     } else {
       echo "End Invalid Menu";
     }
@@ -251,13 +256,13 @@ class Menu
     $level = count($textArray);
 
     if ($level == 1) {
-      $response = "CON Thannk you for using our Service\n";
+      $response = "CON Thank you for using our Service\n";
 
       $response .= "1. Unsubscribe";
 
       echo $response;
     } elseif ($level == 2 && $textArray[1] == 1) {
-      //replace with subscriprion status
+     
       $user->unSubscribeUser("unsubscribed", $pdo);
       echo "END You have successfully unsubscribed from our service. You will still access the menu but you will not receive any messages from Us!";
     } else {
@@ -273,7 +278,7 @@ class Menu
 
   public function goBack($text)
   {
-    //1*4*5*1*98*2*1234
+    
     $explodedText = explode("*", $text);
     while (array_search(Util::$GO_BACK, $explodedText) != false) {
       $firstIndex = array_search(Util::$GO_BACK, $explodedText);
@@ -284,7 +289,6 @@ class Menu
 
   public function goToMainMenu($text)
   {
-    //1*4*5*1*99*2*1234*99
     $explodedText = explode("*", $text);
     while (array_search(Util::$GO_TO_MAIN_MENU, $explodedText) != false) {
       $firstIndex = array_search(Util::$GO_TO_MAIN_MENU, $explodedText);
@@ -292,6 +296,7 @@ class Menu
     }
     return join("*", $explodedText);
   }
+
 
 
   public function persistInvalidEntry($sessionId, $user, $ussdLevel, $pdo)
