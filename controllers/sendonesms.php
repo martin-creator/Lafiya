@@ -6,9 +6,9 @@
     $phoneNumber = $_POST['phoneNumber'];
     $message = $_POST['message'];
 
-    //print($message);
+    print($message);
 
-   //echo $phoneNumber;
+    echo $phoneNumber;
 
     
    
