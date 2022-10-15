@@ -1,11 +1,11 @@
 <?php
 
-include_once "../../util.php";
-include_once "../../models/user.php";
-include_once "../../models/healthconditions.php";
-include_once "../../models/subscriptionplan.php";
-include_once "../../models/faq.php";
-include_once "../../models/sms.php";
+include_once '../util.php';
+include_once '../models/user.php';
+include_once '../models/healthconditions.php';
+include_once '../models/subscriptionplan.php';
+include_once '../models/faq.php';
+include_once '../models/sms.php';
 
 class Menu
 {
@@ -197,7 +197,7 @@ class Menu
       $sms = new Sms($user->getPhone());
                 $result = $sms->sendSMS($msg, $user->getPhone());
 
-      $response = "CON  You will receive a confirmation message shortly"\n";
+      $response = "CON  You will receive a confirmation message shortly \n";
 
       $response .= Util::$GO_TO_MAIN_MENU . " " . "Main Menu\n";
 
@@ -209,7 +209,7 @@ class Menu
       $sms = new Sms($user->getPhone());
                 $result = $sms->sendSMS($msg, $user->getPhone());
 
-      $response = "CON You will receive a confirmation message shortly"\n";
+      $response = "CON You will receive a confirmation message shortly\n";
 
 
       $response .= Util::$GO_TO_MAIN_MENU . " " . "Main Menu\n";

@@ -1,8 +1,8 @@
 <?php
 
-include_once './models/menu.php';
-include_once './models/user.php';
-include_once './models/db.php';
+include_once '../models/menu.php';
+include_once '../models/user.php';
+include_once '../models/db.php';
 
 
 $sessionId   = $_POST["sessionId"];
