@@ -43,9 +43,18 @@ $.ajax({
       data: chartdata,
       options: {
         scales: {
+          xAxes: [ {
+            scaleLabel: {
+              display: true,
+              labelString: 'Subscription Plan'
+            }}],
           yAxes: [{
             ticks: {
               beginAtZero: true
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Number of Subscribers'
             }
           }]
         }
