@@ -1,5 +1,7 @@
 <?php
 
+include_once '../models/healthconditions.php';
+
 class User
 {
   protected $name;
@@ -100,14 +102,26 @@ class User
     }catch(PDOException $e){
         echo $e->getMessage();
     }
-
-
-    
-    
-}
-
-
   
 }
+
+public function setUserHealthCondition($name, $age,$pdo, $healthcondition){
+      
+  $this->setName($name);
+  $this->setAge($age);
+  $this->register($pdo);
+  
+  $healthcondition = new HealthCondition($healthcondition);
+  $healthcondition->setHealthCondition(
+    $healthcondition->getHealthCondition(),
+    $this->readUserId($pdo),
+    $pdo
+  );
+
+}
+ 
+}
+
+
 
 ?>

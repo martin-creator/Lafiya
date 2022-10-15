@@ -66,17 +66,10 @@ class Menu
     } elseif ($level == 4 && $textArray[3] == 1) {
       $name = $textArray[1];
       $age = $textArray[2];
+      $healthcondition = "Diabetes";
       $user = new User($phoneNumber);
-      $user->setName($name);
-      $user->setAge($age);
-      //subscription plan
-      $user->register($pdo);
-      $healthcondition = new HealthCondition("Diabetes");
-      $healthcondition->setHealthCondition(
-        $healthcondition->getHealthCondition(),
-        $user->readUserId($pdo),
-        $pdo
-      );
+      $user->setUserHealthCondition($name, $age,$pdo, $healthcondition);
+
       $response = "CON You  have choosen the topic on diabetes \n";
 
       $response .= Util::$GO_TO_MAIN_MENU . " " . "Main Menu\n";
@@ -85,17 +78,10 @@ class Menu
     } elseif ($level == 4 && $textArray[3] == 2) {
       $name = $textArray[1];
       $age = $textArray[2];
+      $healthcondition = "Hypertension";
       $user = new User($phoneNumber);
-      $user->setName($name);
-      $user->setAge($age);
-      //subscription plan
-      $user->register($pdo);
-      $healthcondition = new HealthCondition("Hypertension");
-      $healthcondition->setHealthCondition(
-        $healthcondition->getHealthCondition(),
-        $user->readUserId($pdo),
-        $pdo
-      );
+      $user->setUserHealthCondition($name, $age,$pdo, $healthcondition);
+
       $response = "CON You  have choosen the topic on hypertension\n";
 
       $response .= Util::$GO_TO_MAIN_MENU . " " . "Main Menu\n";
@@ -104,17 +90,9 @@ class Menu
     } elseif ($level == 4 && $textArray[3] == 3) {
       $name = $textArray[1];
       $age = $textArray[2];
+      $healthcondition = "Depression";
       $user = new User($phoneNumber);
-      $user->setName($name);
-      $user->setAge($age);
-      //subscription plan
-      $user->register($pdo);
-      $healthcondition = new HealthCondition("Depression");
-      $healthcondition->setHealthCondition(
-        $healthcondition->getHealthCondition(),
-        $user->readUserId($pdo),
-        $pdo
-      );
+      $user->setUserHealthCondition($name, $age,$pdo, $healthcondition);
       $response = "CON You  have choosen the topic on depression\n";
 
       $response .= Util::$GO_TO_MAIN_MENU . " " . "Main Menu\n";
@@ -123,17 +101,10 @@ class Menu
     } elseif ($level == 4 && $textArray[3] == 4) {
       $name = $textArray[1];
       $age = $textArray[2];
+      $healthcondition = "Cancer";
       $user = new User($phoneNumber);
-      $user->setName($name);
-      $user->setAge($age);
-      //subscription plan
-      $user->register($pdo);
-      $healthcondition = new HealthCondition("Cancer");
-      $healthcondition->setHealthCondition(
-        $healthcondition->getHealthCondition(),
-        $user->readUserId($pdo),
-        $pdo
-      );
+      $user->setUserHealthCondition($name, $age,$pdo, $healthcondition);
+
       $response = "CON You  have choosen the topic on cancer\n";
 
       $response .= Util::$GO_TO_MAIN_MENU . " " . "Main Menu\n";
@@ -142,17 +113,10 @@ class Menu
     } elseif ($level == 4 && $textArray[3] == 5) {
       $name = $textArray[1];
       $age = $textArray[2];
+      $healthcondition = "Stroke";
       $user = new User($phoneNumber);
-      $user->setName($name);
-      $user->setAge($age);
-      //subscription plan
-      $user->register($pdo);
-      $healthcondition = new HealthCondition("Stroke");
-      $healthcondition->setHealthCondition(
-        $healthcondition->getHealthCondition(),
-        $user->readUserId($pdo),
-        $pdo
-      );
+      $user->setUserHealthCondition($name, $age,$pdo, $healthcondition);
+      
       $response = "CON You  have choosen the topic on stroke\n";
 
       $response .= Util::$GO_TO_MAIN_MENU . " " . "Main Menu\n";
