@@ -16,7 +16,6 @@
 
 <body>
     <!-- Nav bar -->
-    <!-- Grey with black text -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-light">
         <ul class="navbar-nav text-white">
             <li class="nav-item">
@@ -44,18 +43,18 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-6 card" >
+            <div class="col-6 card">
                 <h4 class="text-center card-title mt-4  "> Subscription Plan Vs Number of subscribers</h4>
                 <canvas id="mycanvas"></canvas>
             </div>
-    
+
             <div class=" col-6 card ">
                 <h4 class="text-center card-title mt-4 "> Health Condition Vs Number of subscribers</h4>
                 <canvas id="myhealthcanvas"></canvas>
             </div>
-    
+
         </div>
-        
+
     </div>
 
     <div class="container-fluid mt-5 mb-5">
@@ -64,30 +63,28 @@
                 <h4 class="text-center card-title mt-4 "> Age Range Vs Number of subscribers</h4>
                 <canvas id="myage"></canvas>
             </div>
-    
-            <div class=" col-6 ">
+
+            <div class=" col-6  card">
+                <h4 class="text-center card-title mt-4 "> Subscribed Vs Unsubcribed Users </h4>
                 <canvas id="mysubstatus"></canvas>
             </div>
-    
+
         </div>
-        
+
 
     </div>
 
 
     <!-- javascript -->
-    <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
-    <!-- <script type="text/javascript" src="js/Chart.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script type="text/javascript" src="../controllers/chartjs/subscriptionplans.js"></script>
     <script type="text/javascript" src="../controllers/chartjs/healthcondition.js"></script>
     <script type="text/javascript" src="../controllers/chartjs/age.js"></script>
-    <script type="text/javascript" src="../controllers/chartjs/subscription.js"></script>
+    <script type="text/javascript" src="../controllers/chartjs/subscriptionstatus.js"></script>
 
 
 
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

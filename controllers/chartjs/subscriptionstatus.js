@@ -3,19 +3,13 @@ $.ajax({
   url: "http://localhost/healthussd/controllers/charts/subscriptiondata.php",
   method: "GET",
   success: function (data) {
-    var data = $.parseJSON(data) // important line
-    //data = JSON.stringify(data)
-    console.log(data);
-    //data = JSON.parse(data)
-    ans = typeof data
-    console.log(ans);
-
-    var player = [];
-    var score = [];
+    var data = $.parseJSON(data)
+    var subscriptionStatus = [];
+    var numberOfSubscribers = [];
 
     for (var i in data) {
-      player.push(data[i].substatus);
-      score.push(data[i].freq);
+      subscriptionStatus.push(data[i].substatus);
+      numberOfSubscribers.push(data[i].freq);
     }
 
     var barColors = [
@@ -27,7 +21,7 @@ $.ajax({
     ];
 
     var chartdata = {
-      labels: player,
+      labels: subscriptionStatus,
       datasets: [
         {
           label: 'Number of Subscribers',
@@ -35,7 +29,7 @@ $.ajax({
           borderColor: barColors,
           hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
           hoverBorderColor: 'rgba(200, 200, 200, 1)',
-          data: score
+          data: numberOfSubscribers
         }
       ]
     };
@@ -44,16 +38,7 @@ $.ajax({
 
     var barGraph = new Chart(subchart, {
       type: 'pie',
-      data: chartdata,
-      options: {
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
-        }
-      }
+      data: chartdata
     });
   },
   error: function (data) {

@@ -3,7 +3,7 @@ $.ajax({
     url: "http://localhost/healthussd/controllers/charts/agedata.php",
     method: "GET",
     success: function (data) {
-        var data = $.parseJSON(data) 
+        var data = $.parseJSON(data)
         var ageRange = [];
         var numberOfSubscribers = [];
 
@@ -52,11 +52,12 @@ $.ajax({
             data: chartdata,
             options: {
                 scales: {
-                    xAxes: [ {
+                    xAxes: [{
                         scaleLabel: {
-                          display: true,
-                          labelString: 'Age Range'
-                        }}],
+                            display: true,
+                            labelString: 'Age Range'
+                        }
+                    }],
                     yAxes: [{
                         ticks: {
                             beginAtZero: true
