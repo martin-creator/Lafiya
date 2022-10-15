@@ -1,3 +1,12 @@
+<?php
+	require '../models/db.php';
+	session_start();
+ 
+	if(!ISSET($_SESSION['user'])){
+		header('location: ../views/index.php'); 
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,17 +28,17 @@
     <nav class="navbar navbar-expand-sm bg-dark navbar-light">
         <ul class="navbar-nav text-white">
             <li class="nav-item">
-                <a class="nav-link  text-white" href="./form.html">Dashboard</a>
+                <a class="nav-link  text-white" href="./form.php">Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link  text-white" href="./summary.html">Summary</a>
+                <a class="nav-link  text-white" href="./summary.php">Summary</a>
             </li>
         </ul>
 
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link  text-white" href="#">Logout &nbsp; &nbsp;<i class="fa fa-sign-out text-white"
+                    <a class="nav-link  text-white" href="../controllers/logout.php">Logout &nbsp; &nbsp;<i class="fa fa-sign-out text-white"
                             aria-hidden="true"></i></a>
                 </li>
             </ul>

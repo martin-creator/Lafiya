@@ -19,7 +19,7 @@
         <h1><strong>Admin Registration</strong></h1>
     </div>
     <div class="container text-centered mt-5 card col-md-4">
-        <form class="mt-5 mb-5" action="../controllers/authenticate.php" method="post">
+        <form class="mt-5 mb-5" action="../controllers/register_logic.php" method="post">
             <!-- User input -->
             <div class="form-outline mb-4">
                 <input type="text" id="form2Example1" class="form-control" name="username" />
@@ -57,7 +57,7 @@
             </div>
 
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-block mb-4" value="Login" name="login">
+            <button type="submit" class="btn btn-primary btn-block mb-4" value="register" name="register">
                 Register
             </button>
         </form>

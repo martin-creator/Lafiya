@@ -49,7 +49,7 @@ class User
   public function register($pdo)
   {
     try {
-      //register user
+      
       $stmt = $pdo->prepare(
         "INSERT INTO user (name, age, phone) values(?,?,?)"
       );
@@ -88,7 +88,7 @@ class User
   {
     $stmt = $pdo->prepare("SELECT uid  FROM user WHERE phone=?");
     $stmt->execute([$this->getPhone()]);
-    $row = $stmt->fetch(); // pick the row that is going to be returned
+    $row = $stmt->fetch(); 
     return $row["uid"] ?? "default value";
   }
 

@@ -1,38 +1,37 @@
 <?php
 session_start();
 
-include_once '../models/db.php';
-
+include_once "../models/db.php";
 
 $db = new DBConnector();
 $pdo = $db->connectToDB();
 
-if(ISSET($_POST['login'])){
-    if($_POST['username'] != "" || $_POST['password'] != ""){
-        $username = $_POST['username'];
-        // md5 encrypted
-        // $password = md5($_POST['password']);
-        $password = $_POST['password'];
-        $sql = "SELECT * FROM `member` WHERE `username`=? AND `password`=? ";
-        $query = $pdo->prepare($sql);
-        $query->execute(array($username,$password));
-        $row = $query->rowCount();
-        $fetch = $query->fetch();
-        if($row > 0) {
-            $_SESSION['user'] = $fetch['mem_id'];
-            header("location: home.php");
-        } else{
-            echo "
-            <script>alert('Invalid username or password')</script>
-            <script>window.location = 'index.php'</script>
-            ";
-        }
-    }else{
-        echo "
-            <script>alert('Please complete the required field!')</script>
-            <script>window.location = 'index.php'</script>
-        ";
+if (isset($_POST["login"])) {
+  if ($_POST["username"] != "" || $_POST["password"] != "") {
+    $username = $_POST["username"];
+    
+    $password = $_POST["password"];
+    $query = $pdo->prepare(
+      "SELECT * FROM admins WHERE username=? AND password=?"
+    );
+    $query->execute([$username, $password]);
+    $row = $query->rowCount();
+    $fetch = $query->fetch();
+    if ($row > 0) {
+      $_SESSION["user"] = $fetch["id"];
+      header("location: http://localhost/Lafayi/views/form.php");
+    } else {
+      echo '<script type="text/JavaScript"> 
+        window.location.href="http://localhost/Lafayi/views/index.php";
+        alert("Invalid username or password");
+            </script>';
     }
+  } else {
+        echo '<script type="text/JavaScript"> 
+        window.location.href="http://localhost/Lafayi/views/index.php";
+        alert("Please complete the required field!");
+            </script>';
+  }
 }
 
 ?>
