@@ -1,3 +1,13 @@
+<?php
+	require 'conn.php';
+	session_start();
+ 
+	if(!ISSET($_SESSION['user'])){
+		header('location: ../views/index.php'); 
+	}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
