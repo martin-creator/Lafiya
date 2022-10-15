@@ -1,7 +1,6 @@
 <?php
 include_once '../../models/db.php';
 
-//$user = new User($phoneNumber); //$isRegistered = true;
 $db = new DBConnector();
 $pdo = $db->connectToDB();
 
@@ -22,8 +21,6 @@ $result2 = $stmt2->fetchAll();
 $result3 = $stmt3->fetchAll();
 $result4 = $stmt4->fetchAll();
 $result5 = $stmt5->fetchAll();
-
-
 
 
 //loop through the returned data
@@ -53,19 +50,9 @@ foreach ($result5 as $row) {
 }
 
 $finalData = array_merge($data1, $data2, $data3, $data4, $data5);
-//$object = (object) $finalData;
-
-//free memory associated with result
-// $result1->close();
-// $result2->close();
-// $result3->close();
 
 $pdo = null;
 
-//now print the data
-// print json_encode($data1);
-// print json_encode($data2);
-// print json_encode($data3);
 print json_encode($finalData);
 
 
