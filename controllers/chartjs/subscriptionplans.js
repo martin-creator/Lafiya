@@ -8,7 +8,7 @@ $.ajax({
     var numberOfSubscribers = [];
 
     for (var i in data) {
-     subscriptionPlans.push(data[i].planName);
+      subscriptionPlans.push(data[i].planName);
       numberOfSubscribers.push(data[i].freq);
     }
 
@@ -21,7 +21,7 @@ $.ajax({
     ];
 
     var chartdata = {
-      labels:subscriptionPlans,
+      labels: subscriptionPlans,
       datasets: [
         {
           label: 'Number of Subscribers',
@@ -41,11 +41,12 @@ $.ajax({
       data: chartdata,
       options: {
         scales: {
-          xAxes: [ {
+          xAxes: [{
             scaleLabel: {
               display: true,
               labelString: 'Subscription Plan'
-            }}],
+            }
+          }],
           yAxes: [{
             ticks: {
               beginAtZero: true
