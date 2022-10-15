@@ -10,14 +10,14 @@ $.ajax({
         ans = typeof data
         console.log(ans);
 
-        var player = [];
-        var xValues = [];
+        var healthCondition = [];
+        var numberOfSubscribers = [];
 
             for(var i in data) {
-              player.push( data[i].healthcondition);
-              xValues.push(data[i].freq);
+              healthCondition.push( data[i].healthcondition);
+              numberOfSubscribers.push(data[i].freq);
             }
-            console.log(xValues);
+            console.log(numberOfSubscribers);
 
             var barColors = [
                 "#b91d47",
@@ -28,15 +28,15 @@ $.ajax({
             ];
 
             var chartdata = {
-              labels: player,
+              labels: healthCondition,
               datasets : [
                 {
-                  label: 'Number of Patients',
+                  label: 'Number of Subscribers',
                   backgroundColor: barColors,
                   borderColor: barColors,
                   hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
                   hoverBorderColor: 'rgba(200, 200, 200, 1)',
-                  data: xValues,
+                  data: numberOfSubscribers,
                   
                 }
               ]
@@ -49,9 +49,19 @@ $.ajax({
               data: chartdata,
               options: {
                 scales: {
+                  xAxes: [ {
+                    scaleLabel: {
+                      display: true,
+                      labelString: 'Disease'
+                    }}],
+
                     yAxes: [{
                         ticks: {
                             beginAtZero: true
+                        },
+                        scaleLabel: {
+                          display: true,
+                          labelString: 'Number of Subscribers'
                         }
                     }]
                 }
