@@ -1,4 +1,4 @@
-# Health USSD App
+# Lafiya - your health matters!
 > Outline a brief description of your project.
 > Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
 
@@ -25,10 +25,20 @@
 
 
 ## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
 
+### 1. Backend Dependencies
+Our tech stack includes the following:
+- Ruby - version 2.5.5
+- Rails - version 5.0.3
+- Sqlite3 (Database)
+- Check the [Gemfile](./Gemfile) for other dependencies. You should be careful when changing any   gem versions as this  can break the application. 
+
+### 2. Frontend Dependencies
+Our tech stack includes the following:
+- Bootstrap -version 3.0.0
+- Javascript-jquery
+- HTML
+- CSS
 
 ## Features
 List the ready features here:
@@ -38,7 +48,14 @@ List the ready features here:
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+[Imgur](https://imgur.com/Wor7Smq)
+[Imgur](https://imgur.com/eZw124f)
+[Imgur](https://imgur.com/f3A1Gdr)
+[Imgur](https://imgur.com/nGED5JB)
+[Imgur](https://imgur.com/CjYCOlg)
+[Imgur](https://imgur.com/WulWYhS)
+[Imgur](https://imgur.com/Py8U8Tk)
+
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 
