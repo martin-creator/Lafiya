@@ -126,7 +126,6 @@ To do:
 
 
 ## Acknowledgements
-Give credit here.
 - This project was inspired and supported by [mDOC](https://www.mymdoc.com/)
 - Many thanks to [Dr Kenga](https://ke.linkedin.com/in/derduskenga) whose knowledge in USSD development has enabled us to build the application
 
