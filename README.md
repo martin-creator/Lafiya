@@ -47,12 +47,16 @@ List the ready features here:
 
 
 ## Screenshots
+<details>
+<summary> Examples of working USSD Application </summary>
 ![Imgur](/images/1.png)
 ![Imgur](/images/2.png)
 ![Imgur](/images/3.png)
 ![Imgur](/images/4.png)
 ![Imgur](/images/5.png)
 ![Imgur](/images/6.png)
+
+</details>
 
 <!-- If you have screenshots you'd like to share, include them here. -->
 
