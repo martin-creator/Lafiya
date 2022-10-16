@@ -50,10 +50,18 @@
                 </div>
             </div>
 
+            
             <!-- Submit button -->
             <button type="submit" class="btn btn-primary btn-block mb-4" value="Login" name="login">
                 Sign in
             </button>
+
+            <div class="row mb-4 ">
+                <div class="col text-center">
+                    <!-- Register -->
+                    <a href="../views/registration.php">Register you account now!</a>
+                </div>
+            </div>
         </form>
     </div>
 

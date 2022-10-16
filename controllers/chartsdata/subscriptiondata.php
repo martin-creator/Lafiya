@@ -29,7 +29,8 @@ foreach ($result2 as $row) {
 
 $finalData = array_merge($data1, $data2);
 
-$db->closeDB();
+
+
 
 print json_encode($finalData);
 

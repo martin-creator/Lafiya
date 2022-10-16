@@ -1,10 +1,10 @@
 <?php
-	require '../models/db.php';
-	session_start();
- 
-	if(!ISSET($_SESSION['user'])){
-		header('location: ../views/index.php'); 
-	}
+include_once "../models/db.php";
+session_start();
+
+if (!isset($_SESSION["user"])) {
+  header("location: ../views/index.php");
+}
 ?>
 
 
@@ -38,6 +38,17 @@
 
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
       <ul class="navbar-nav ml-auto">
+      <?php
+      $id = $_SESSION["user"];
+      $db = new DBConnector();
+      $pdo = $db->connectToDB();
+      $sql = $pdo->prepare("SELECT * FROM admins WHERE id = $id ");
+      $sql->execute();
+      $fetch = $sql->fetch();
+      ?>
+      <li class="nav-item">
+          <a class="nav-link text-white" ><?php echo $fetch["username"]; ?></a>
+        </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="../controllers/logout.php">Logout &nbsp; &nbsp;<i class="fa fa-sign-out text-white"
               aria-hidden="true"></i></a>
@@ -45,6 +56,7 @@
       </ul>
     </div>
   </nav>
+  
   <!-- Title-->
   <div>
     <h1 class="text-center mt-3 text-white">

@@ -49,9 +49,10 @@ foreach ($result5 as $row) {
   $data5[] = $row;
 }
 
-$finalData = array_merge($data1, $data2, $data3, $data4, $data5);
+$finalData =  array_merge($data1, $data2, $data3, $data4, $data5);
 
-$db->closeDB();
+
+
 
 print json_encode($finalData);
 

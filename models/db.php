@@ -1,6 +1,5 @@
 <?php
-
-include_once "../util.php";
+include_once dirname( __DIR__ ) . '/util.php';
 
 class DBConnector
 {

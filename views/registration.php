@@ -60,6 +60,13 @@
             <button type="submit" class="btn btn-primary btn-block mb-4" value="register" name="register">
                 Register
             </button>
+
+            <div class="row mb-4 ">
+                <div class="col text-center">
+                    <!-- Login  -->
+                    <a href="../views/index.php">Have an account? Login now!</a>
+                </div>
+            </div>
         </form>
     </div>
 

@@ -1,10 +1,10 @@
 <?php
-	require '../models/db.php';
-	session_start();
- 
-	if(!ISSET($_SESSION['user'])){
-		header('location: ../views/index.php'); 
-	}
+session_start();
+require "../models/db.php";
+
+if (!isset($_SESSION["user"])) {
+  header("location: ../views/index.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js" integrity="sha512-cEgdeh0IWe1pUYypx4mYPjDxGB/tyIORwjxzKrnoxcif2ZxI7fw81pZWV0lGnPWLrfIHGA7qc964MnRjyCYmEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Lafayi-your health matters!</title>
 </head>
 
@@ -37,6 +37,17 @@
 
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ml-auto">
+            <?php
+            $id = $_SESSION["user"];
+            $db = new DBConnector();
+            $pdo = $db->connectToDB();
+            $sql = $pdo->prepare("SELECT * FROM admins WHERE id = $id ");
+            $sql->execute();
+            $fetch = $sql->fetch();
+            ?>
+      <li class="nav-item">
+          <a class="nav-link text-white" ><?php echo $fetch["username"]; ?></a>
+        </li>
                 <li class="nav-item">
                     <a class="nav-link  text-white" href="../controllers/logout.php">Logout &nbsp; &nbsp;<i class="fa fa-sign-out text-white"
                             aria-hidden="true"></i></a>
@@ -96,9 +107,6 @@
 
 
     <!-- Optional JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>

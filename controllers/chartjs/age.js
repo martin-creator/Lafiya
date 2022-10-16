@@ -3,7 +3,8 @@ $.ajax({
     url: "http://localhost/Lafayi/controllers/chartsdata/agedata.php",
     method: "GET",
     success: function (data) {
-        var data = $.parseJSON(data)
+        //console.log(typeof data);
+        var data = $.parseJSON(data);
         var ageRange = [];
         var numberOfSubscribers = [];
 
