@@ -17,10 +17,17 @@
 
 
 ## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
+### Backgound
+Low digital health literacy remains a problem in Africa. It stands to reason that the most obvious approach to addressing low health literacy is making information more accessible. Without accessible information, there is no basis by which individuals or a community can process messages to improve health outcomes. With internet penetration at 51% in Nigeria and lower in some other African countries, there is a need to innovate around getting health messages across to communities without internet services and improving their health literacy.
+
+### Proposed Solution
+A USSD-Based mobile health educational tool that members subscribe to and select the types of messages they’d like to receive.
+
+
+### Long-term solution
+We hypothesise that if the proposed solution is successful, we could improve digital literacy access to the communities we serve.
+
+
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
