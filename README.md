@@ -47,13 +47,12 @@ List the ready features here:
 
 
 ## Screenshots
-[Imgur](https://imgur.com/Wor7Smq.png)
-[Imgur](https://imgur.com/eZw124f.pgn)
-[Imgur](https://imgur.com/f3A1Gdr.png)
-[Imgur](https://imgur.com/nGED5JB.png)
-[Imgur](https://imgur.com/CjYCOlg.png)
-[Imgur](https://imgur.com/WulWYhS.png)
-[Imgur](https://imgur.com/Py8U8Tk.png)
+[Imgur](/images/1.png)
+[Imgur](/images/2.png)
+[Imgur](/images/3.png)
+[Imgur](/images/4.png)
+[Imgur](/images/5.png)
+[Imgur](/images/6.png)
 
 <!-- If you have screenshots you'd like to share, include them here. -->
 
