@@ -115,14 +115,6 @@ if (!isset($_SESSION["user"])) {
                 <option>Monthly</option>
               </select>
             </div>
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">Age</label>
-              <select class="form-control" id="exampleFormControlSelect1" name="age">
-                <option>50</option>
-                <option>60</option>
-                <option>100</option>
-              </select>
-            </div>
 
             <div class="form-group">
               <label for="exampleFormControlTextarea1">Message (Max 182 characters)</label>
