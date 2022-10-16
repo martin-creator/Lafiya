@@ -28,10 +28,9 @@
 
 ### 1. Backend Dependencies
 Our tech stack includes the following:
-- Ruby - version 2.5.5
-- Rails - version 5.0.3
-- Sqlite3 (Database)
-- Check the [Gemfile](./Gemfile) for other dependencies. You should be careful when changing any   gem versions as this  can break the application. 
+- PHP - version 5.0.5
+- MYSQL - version 5.0.0
+- Check the [Composer file](./composer.json) for other dependencies. You should be careful when changing any  dependency versions as this  can break the application. 
 
 ### 2. Frontend Dependencies
 Our tech stack includes the following:
@@ -48,13 +47,13 @@ List the ready features here:
 
 
 ## Screenshots
-[Imgur](https://imgur.com/Wor7Smq)
-[Imgur](https://imgur.com/eZw124f)
-[Imgur](https://imgur.com/f3A1Gdr)
-[Imgur](https://imgur.com/nGED5JB)
-[Imgur](https://imgur.com/CjYCOlg)
-[Imgur](https://imgur.com/WulWYhS)
-[Imgur](https://imgur.com/Py8U8Tk)
+[Imgur](https://imgur.com/Wor7Smq.png)
+[Imgur](https://imgur.com/eZw124f.pgn)
+[Imgur](https://imgur.com/f3A1Gdr.png)
+[Imgur](https://imgur.com/nGED5JB.png)
+[Imgur](https://imgur.com/CjYCOlg.png)
+[Imgur](https://imgur.com/WulWYhS.png)
+[Imgur](https://imgur.com/Py8U8Tk.png)
 
 <!-- If you have screenshots you'd like to share, include them here. -->
 
