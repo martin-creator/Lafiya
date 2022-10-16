@@ -1,6 +1,6 @@
 # Lafiya - your health matters!
-> Outline a brief description of your project.
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
+> USSD-Based health education tool to nudge people towards wellness with patient-centred health content.
+> Live demo [_here_](https://lafiya.primetel.tech/views/index.php). 
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -40,23 +40,22 @@ Our tech stack includes the following:
 - CSS
 
 ## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+Ready features here:
+- Users can subscribe and unsubcribe
+- List FAQS
+- Users can select type of messages to receive
+- Admin dashboard to send messages to one or multiple users
+- Admin dashboard with summary of keep metrics of business
+- Admin registration and login
 
 
 ## Screenshots
-<details>
-<summary> Examples of working USSD Application </summary>
+
 ![Imgur](/images/1.png)
 ![Imgur](/images/2.png)
 ![Imgur](/images/3.png)
 ![Imgur](/images/4.png)
-![Imgur](/images/5.png)
-![Imgur](/images/6.png)
 
-</details>
 
 <!-- If you have screenshots you'd like to share, include them here. -->
 
