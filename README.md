@@ -132,7 +132,7 @@ Give credit here.
 
 
 ## Contact
-Created by [@martin-creator, @moreenirungu, @paulbulibabuti, @princiaishimew, @fehile](https://www.flynerd.pl/) - feel free to contact me!
+Created by [@martin-creator, @moreenirungu, @paulbulibabuti, @princiaishimew, @fehile](martinlubowa@outlook.com) - feel free to contact us!
 
 
 
