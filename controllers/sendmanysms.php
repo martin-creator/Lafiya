@@ -11,12 +11,12 @@ $response = $sms->sendSMS($message, $recipients);
 
 if ($response["status"] == "success") {
   echo '<script type="text/JavaScript"> 
-    window.location.href="https://bfeb-154-225-250-117.in.ngrok.io/Lafayi/views/form.html";
+    window.location.href=" http://localhost/Lafayi/views/form.html";
      alert("Your message was delivered successfully");
      </script>';
 } else {
   echo '<script type="text/JavaScript"> 
-    window.location.href="https://bfeb-154-225-250-117.in.ngrok.io/Lafayi/views/form.html";
+    window.location.href=" http://localhost/Lafayi/views/form.html";
      alert("Your message delivery failed!");
      </script>';
 }
