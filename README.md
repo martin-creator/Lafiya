@@ -47,12 +47,12 @@ List the ready features here:
 
 
 ## Screenshots
-[Imgur](/images/1.png)
-[Imgur](/images/2.png)
-[Imgur](/images/3.png)
-[Imgur](/images/4.png)
-[Imgur](/images/5.png)
-[Imgur](/images/6.png)
+![Imgur](/images/1.png)
+![Imgur](/images/2.png)
+![Imgur](/images/3.png)
+![Imgur](/images/4.png)
+![Imgur](/images/5.png)
+![Imgur](/images/6.png)
 
 <!-- If you have screenshots you'd like to share, include them here. -->
 
