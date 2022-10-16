@@ -61,7 +61,7 @@ if (!isset($_SESSION["user"])) {
   <!-- Title-->
   <div>
     <h1 class="text-center mt-3 text-white">
-      Welcome to the Health USSD Planet!
+      Welcome to Lafiya!
     </h1>
   </div>
   <div class="container mt-5">
