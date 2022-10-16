@@ -76,11 +76,12 @@ Ready features here:
 5 - Inside your new directory run , --npm install--  to install any javascript dependencies
 6 - Also, run the composer install to install any PHP libraries
 7 - Then navigate to phpMyAdmin on your local machine  and create a new database called 'healthussd'
-8 - Select the newly created database and [import this SQL dump ](./database/lafiya.sql)
+8 - Select the newly created database and import sql dump(link provide below)
 9 - After this , head over to the xammp control and start Apacher and MySQL to run the application on yout local machine
 10 - Visit http://localhost/Lafayi/views/index.php to access the application
 
 ```
+* Download  [SQL dump ](./database/lafiya.sql)
 
 ### Testing the USSD Application
 
@@ -93,9 +94,11 @@ Ready features here:
 
 ```
 
+* [Access the USSD menu to understand our workflow](https://drive.google.com/file/d/1j8zSddB81ISFrdrcg6Kj9eH4DmnFzNWr/view?usp=sharing)
+
 
 ## Usage
- Our application is built for the next billion years, people who don't have access to smartphones. We therefore hope that any person should find it easy to use. 
+ Our application is built for the next billion users, people who don't have access to smartphones. We therefore hope that any person should find it easy to use. 
 
 
 
@@ -130,4 +133,7 @@ Give credit here.
 
 ## Contact
 Created by [@martin-creator, @moreenirungu, @paulbulibabuti, @princiaishimew, @fehile](https://www.flynerd.pl/) - feel free to contact me!
+
+
+
 
