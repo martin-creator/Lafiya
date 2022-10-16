@@ -130,8 +130,5 @@ To do:
 
 
 ## Contact
-Created by [@martin-creator, @moreenirungu, @paulbulibabuti, @princiaishimew, @fehile](martinlubowa@outlook.com) - feel free to contact us!
-
-
-
+Created by @martin-creator_martinjosephlubowa@gmail.com, @moreenirungu_irungumaureen1@gmail.com, @felihle_ncongwanefelihle02@gmail.com, @paulbulibabuti_bulibabutipaul@gmail.com, @princiaishimwe_princiaishimwe88@gmail.com] - feel free to contact us!
 
