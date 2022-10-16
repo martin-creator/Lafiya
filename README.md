@@ -13,7 +13,7 @@
 * [Room for Improvement](#room-for-improvement)
 * [Acknowledgements](#acknowledgements)
 * [Contact](#contact)
-<!-- * [License](#license) -->
+
 
 
 ## General Information
@@ -28,7 +28,6 @@ A USSD-Based mobile health educational tool that members subscribe to and select
 We hypothesise that if the proposed solution is successful, we could improve digital literacy access to the communities we serve.
 
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
 ## Technologies Used
@@ -41,7 +40,7 @@ Our tech stack includes the following:
 
 ### 2. Frontend Dependencies
 Our tech stack includes the following:
-- Bootstrap -version 3.0.0
+- Bootstrap -version 4.0.0
 - Javascript-jquery
 - HTML
 - CSS
@@ -64,51 +63,71 @@ Ready features here:
 ![Imgur](/images/4.png)
 
 
-<!-- If you have screenshots you'd like to share, include them here. -->
 
 
 ## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
 
-Proceed to describe how to install / setup one's local environment / get started with the project.
+* This project is built on PHP 5 and MYSQL using the the XAMPP development environment. [Visit this link to download XAMMP](https://www.apachefriends.org/)
+```
+1 - Once you have installed XAMPP, please navigte to your program folders and select the XAMPP folder
+2 - Inside the XAMMP folder select htdocs
+3 - Open your terminal and git clone this repo in the htdocs directory (git clone https://****************************************)
+4 - Move into the the newly cloned repo using the --cd-- command
+5 - Inside your new directory run , --npm install--  to install any javascript dependencies
+6 - Also, run the composer install to install any PHP libraries
+7 - Then navigate to phpMyAdmin on your local machine  and create a new database called 'healthussd'
+8 - Select the newly created database and [import this SQL dump ](./database/lafiya.sql)
+9 - After this , head over to the xammp control and start Apacher and MySQL to run the application on yout local machine
+10 - Visit http://localhost/Lafayi/views/index.php to access the application
+
+```
+
+### Testing the USSD Application
+
+[Africa's talking API](https://africastalking.com/) is the aggregator that supports the application.  If you would like to test our USSD menu, head over  to [AT](https://africastalking.com/):
+```
+1 - Login into your account 
+2 - Inside your acccount, navigate to the USSD section and create a new service code
+3 - Use https://lafiya.primetel.tech/controllers/index.php as your callback
+4 - Launch  the mobile phone simulator and see the magic!
+
+```
 
 
 ## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
+ Our application is built for the next billion years, people who don't have access to smartphones. We therefore hope that any person should find it easy to use. 
 
-`write-your-code-here`
 
 
 ## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+Project is: _in progress_ 
 
 
 ## Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
 Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
+- Refactor source code to follow DRY and SOLID principles
+- Write Tests for the application to ensure quality and support production environments
+- Protect againts SQL injections and CORS attacks
+- Make all web pages mobile responsive
+- Redesign database to capture mDoc's needs 
+- Improve documentaion in source code
 
 To do:
-- Feature to be added 1
-- Feature to be added 2
+- Content management for  the USSD menus
+- Language translation for specific areas
+- Voice support for differently abled people
+- Mobile payments
+- Diagnosis tools for people are not sure of what they are suffering from
 
 
 ## Acknowledgements
 Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+- This project was inspired and supported by [mDOC](https://www.mymdoc.com/)
+- Many thanks to [Dr Kenga](https://ke.linkedin.com/in/derduskenga) whose knowledge in USSD development has enabled us to build the application
 
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+Created by [@martin-creator, @moreenirungu, @paulbulibabuti, @princiaishimew, @fehile](https://www.flynerd.pl/) - feel free to contact me!
 
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
