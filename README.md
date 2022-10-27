@@ -69,16 +69,16 @@ Ready features here:
 
 * This project is built on PHP 5 and MYSQL using the the XAMPP development environment. [Visit this link to download XAMMP](https://www.apachefriends.org/)
 
-1 - Once you have installed XAMPP, please navigte to your program folders and select the XAMPP folder
-2 - Inside the XAMMP folder select htdocs
-3 - Open your terminal and git clone this repo in the htdocs directory (git clone https://****************************************)
-4 - Move into the the newly cloned repo using the ```cd``` command
-5 - Inside your new directory run , ```npm install```  to install any javascript dependencies
-6 - Also, run the composer install to install any PHP libraries
-7 - Then navigate to phpMyAdmin on your local machine  and create a new database called 'healthussd'
-8 - Select the newly created database and import sql dump(link provide below)
-9 - After this , head over to the xammp control and start Apacher and MySQL to run the application on yout local machine
-10 - Visit http://localhost/Lafayi/views/index.php to access the application
+1. Once you have installed XAMPP, please navigte to your program folders and select the XAMPP folder
+2. Inside the XAMMP folder select htdocs
+3. Open your terminal and git clone this repo in the htdocs directory (git clone https://****************************************)
+4. Move into the the newly cloned repo using the ```cd``` command
+5. Inside your new directory run , ```npm install```  to install any javascript dependencies
+6. Also, run the composer install to install any PHP libraries
+7. Then navigate to phpMyAdmin on your local machine  and create a new database called 'healthussd'
+8. Select the newly created database and import sql dump(link provide below)
+9. After this , head over to the xammp control and start Apacher and MySQL to run the application on yout local machine
+10. Visit http://localhost/Lafayi/views/index.php to access the application
 
 
 * Download  [SQL dump ](./database/lafiya.sql)
