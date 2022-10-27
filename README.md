@@ -47,7 +47,7 @@ Our tech stack includes the following:
 
 ## Features
 Ready features here:
-- Users can subscribe and unsubcribe
+- Users can subscribe and unsubscribe
 - List FAQS
 - Users can select type of messages to receive
 - Admin dashboard to send messages to one or multiple users
@@ -70,7 +70,7 @@ Ready features here:
 * This project is built on PHP 5 and MYSQL using the the XAMPP development environment. [Visit this link to download XAMMP](https://www.apachefriends.org/)
 
 1. Once you have installed XAMPP, please navigte to your program folders and select the XAMPP folder
-2. Inside the XAMMP folder select htdocs
+2. Inside the XAMMP folder, select htdocs
 3. Open your terminal and git clone this repo in the htdocs directory ```git clone https://****************************************```
 4. Move into the the newly cloned repo using the ```cd``` command
 5. Inside your new directory run , ```npm install```  to install any javascript dependencies
@@ -111,7 +111,7 @@ Project is: _in progress_
 Room for improvement:
 - Refactor source code to follow DRY and SOLID principles
 - Write Tests for the application to ensure quality and support production environments
-- Protect againts SQL injections and CORS attacks
+- Protect against SQL injections and CORS attacks
 - Make all web pages mobile responsive
 - Redesign database to capture mDoc's needs 
 - Improve documentaion in source code
@@ -121,7 +121,7 @@ To do:
 - Language translation for specific areas
 - Voice support for differently abled people
 - Mobile payments
-- Diagnosis tools for people are not sure of what they are suffering from
+- Diagnosis tools for people who are not sure of what they are suffering from
 
 
 ## Acknowledgements
@@ -130,5 +130,5 @@ To do:
 
 
 ## Contact
-Created by [@martin-creator_martinjosephlubowa@gmail.com, @moreenirungu_irungumaureen1@gmail.com, @felihle_ncongwanefelihle02@gmail.com, @paulbulibabuti_bulibabutipaul@gmail.com, @princiaishimwe_princiaishimwe88@gmail.com](martinlubowa@outlook.com) - feel free to contact us!
+Created by [@martin-creator_martinlubowa@outlook.com, @moreenirungu_irungumaureen1@gmail.com, @felihlencongwane_felihle02@gmail.com, @paulbulibabuti_bulibabutipaul@gmail.com, @princiaishimwe_princiaishimwe88@gmail.com] (#) - feel free to contact us!
 
