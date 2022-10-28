@@ -99,7 +99,7 @@ if (!isset($_SESSION["user"])) {
               <div class="card-title">
                 <h3 class="text-center mt-3 mb-5">Update FAQS</h3>
               </div>
-              <form>
+              <form method="POST" action="../controllers/faqData.php">
                 <div class="row">
                   <div class="col-4">
                     <div class="form-group">
