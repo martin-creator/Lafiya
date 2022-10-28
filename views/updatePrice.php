@@ -142,7 +142,9 @@ if (!isset($_SESSION["user"])) {
                     </div>
                   </div>
                 </div>
-  
+                <div class="form-group mt-4 text-center">
+              <button class="btn btn-primary">Save Changes</button>
+            </div>
                
               </form>
             </div>

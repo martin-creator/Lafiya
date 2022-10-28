@@ -109,7 +109,7 @@ if (!isset($_SESSION["user"])) {
                         class="form-control"
                         id="exampleFormControlInput1"
                         name="disease1"
-                        placeholder="name@example.com"
+                        placeholder="disease"
                       />
                     </div>
                   </div>
@@ -122,7 +122,7 @@ if (!isset($_SESSION["user"])) {
                         class="form-control"
                         id="exampleFormControlInput1"
                         name="disease2"
-                        placeholder="name@example.com"
+                        placeholder="disease"
                       />
                     </div>
                   </div>
@@ -137,7 +137,7 @@ if (!isset($_SESSION["user"])) {
                         class="form-control"
                         id="exampleFormControlInput1"
                         name="disease3"
-                        placeholder="name@example.com"
+                        placeholder="disease"
                       />
                     </div>
                   </div>
@@ -152,7 +152,7 @@ if (!isset($_SESSION["user"])) {
                         class="form-control"
                         id="exampleFormControlInput1"
                         name="disease4"
-                        placeholder="name@example.com"
+                        placeholder="disease"
                       />
                     </div>
                   </div>
@@ -165,11 +165,14 @@ if (!isset($_SESSION["user"])) {
                         class="form-control"
                         id="exampleFormControlInput1"
                         name="disease5"
-                        placeholder="name@example.com"
+                        placeholder="disease"
                       />
                     </div>
                   </div>
                 </div>
+                <div class="form-group mt-4 text-center">
+              <button class="btn btn-primary">Save Changes</button>
+            </div>
               </form>
             </div>
           </div>

@@ -109,7 +109,7 @@ if (!isset($_SESSION["user"])) {
                         class="form-control"
                         id="exampleFormControlInput1"
                         name="question1"
-                        placeholder="name@example.com"
+                        placeholder="Question"
                       />
                     </div>
   
@@ -132,7 +132,7 @@ if (!isset($_SESSION["user"])) {
                         class="form-control"
                         id="exampleFormControlInput1"
                         name="question2"
-                        placeholder="name@example.com"
+                        placeholder="Question"
                       />
                     </div>
   
@@ -157,7 +157,7 @@ if (!isset($_SESSION["user"])) {
                         class="form-control"
                         id="exampleFormControlInput1"
                         name="question3"
-                        placeholder="name@example.com"
+                        placeholder="Question"
                       />
                     </div>
   
@@ -182,7 +182,7 @@ if (!isset($_SESSION["user"])) {
                         class="form-control"
                         id="exampleFormControlInput1"
                         name="question4"
-                        placeholder="name@example.com"
+                        placeholder="Question"
                       />
                     </div>
   
@@ -197,7 +197,7 @@ if (!isset($_SESSION["user"])) {
                     </div>
                   </div>
   
-                  <div class="col-6">
+                  <div class="col-6 ">
                     <div class="form-group">
                       <label for="exampleFormControlInput1">Question Five </label>
                       <input
@@ -205,7 +205,7 @@ if (!isset($_SESSION["user"])) {
                         class="form-control"
                         id="exampleFormControlInput1"
                         name="question5"
-                        placeholder="name@example.com"
+                        placeholder="Question"
                       />
                     </div>
   
@@ -220,6 +220,9 @@ if (!isset($_SESSION["user"])) {
                     </div>
                   </div>
                 </div>
+                <div class="form-group mt-4 text-center">
+              <button class="btn btn-primary">Save Changes</button>
+            </div>
               </form>
             </div>
           </div>
