@@ -47,7 +47,7 @@ Our tech stack includes the following:
 
 ## Features
 Ready features here:
-- Users can subscribe and unsubcribe
+- Users can subscribe and unsubscribe
 - List FAQS
 - Users can select type of messages to receive
 - Admin dashboard to send messages to one or multiple users
@@ -68,31 +68,31 @@ Ready features here:
 ## Setup
 
 * This project is built on PHP 5 and MYSQL using the the XAMPP development environment. [Visit this link to download XAMMP](https://www.apachefriends.org/)
-```
-1 - Once you have installed XAMPP, please navigte to your program folders and select the XAMPP folder
-2 - Inside the XAMMP folder select htdocs
-3 - Open your terminal and git clone this repo in the htdocs directory (git clone https://****************************************)
-4 - Move into the the newly cloned repo using the --cd-- command
-5 - Inside your new directory run , --npm install--  to install any javascript dependencies
-6 - Also, run the composer install to install any PHP libraries
-7 - Then navigate to phpMyAdmin on your local machine  and create a new database called 'healthussd'
-8 - Select the newly created database and import sql dump(link provide below)
-9 - After this , head over to the xammp control and start Apacher and MySQL to run the application on yout local machine
-10 - Visit http://localhost/Lafayi/views/index.php to access the application
 
-```
+1. Once you have installed XAMPP, please navigte to your program folders and select the XAMPP folder
+2. Inside the XAMMP folder, select htdocs
+3. Open your terminal and git clone this repo in the htdocs directory ```git clone https://****************************************```
+4. Move into the the newly cloned repo using the ```cd``` command
+5. Inside your new directory run , ```npm install```  to install any javascript dependencies
+6. Also, run the composer install to install any PHP libraries
+7. Then navigate to phpMyAdmin on your local machine  and create a new database called 'healthussd'
+8. Select the newly created database and import sql dump(link provide below)
+9. After this , head over to the xammp control and start Apacher and MySQL to run the application on yout local machine
+10. Visit ```http://localhost/Lafayi/views/index.php``` to access the application
+
+
 * Download  [SQL dump ](./database/lafiya.sql)
 
 ### Testing the USSD Application
 
 [Africa's talking API](https://africastalking.com/) is the aggregator that supports the application.  If you would like to test our USSD menu, head over  to [AT](https://africastalking.com/):
-```
-1 - Login into your account 
-2 - Inside your acccount, navigate to the USSD section and create a new service code
-3 - Use https://lafiya.primetel.tech/controllers/index.php as your callback
-4 - Launch  the mobile phone simulator and see the magic!
 
-```
+1. Login into your account 
+2. Inside your acccount, navigate to the USSD section and create a new service code
+3. Use https://lafiya.primetel.tech/controllers/index.php as your callback
+4. Launch  the mobile phone simulator and see the magic!
+
+
 
 * [Access the USSD menu to understand our workflow](https://drive.google.com/file/d/1j8zSddB81ISFrdrcg6Kj9eH4DmnFzNWr/view?usp=sharing)
 
@@ -111,7 +111,7 @@ Project is: _in progress_
 Room for improvement:
 - Refactor source code to follow DRY and SOLID principles
 - Write Tests for the application to ensure quality and support production environments
-- Protect againts SQL injections and CORS attacks
+- Protect against SQL injections and CORS attacks
 - Make all web pages mobile responsive
 - Redesign database to capture mDoc's needs 
 - Improve documentaion in source code
@@ -121,7 +121,7 @@ To do:
 - Language translation for specific areas
 - Voice support for differently abled people
 - Mobile payments
-- Diagnosis tools for people are not sure of what they are suffering from
+- Diagnosis tools for people who are not sure of what they are suffering from
 
 
 ## Acknowledgements
@@ -130,8 +130,5 @@ To do:
 
 
 ## Contact
-Created by [@martin-creator, @moreenirungu, @paulbulibabuti, @princiaishimew, @fehile](martinlubowa@outlook.com) - feel free to contact us!
-
-
-
+Created by [@martin-creator_martinlubowa@outlook.com, @moreenirungu_irungumaureen1@gmail.com, @felihlencongwane_felihle02@gmail.com, @paulbulibabuti_bulibabutipaul@gmail.com, @princiaishimwe_princiaishimwe88@gmail.com] (#) - feel free to contact us!
 
