@@ -30,8 +30,11 @@ if (!isset($_SESSION["user"])) {
   <nav class="navbar navbar-expand-sm bg-dark navbar-light">
     <ul class="navbar-nav text-white">
       <li class="nav-item">
-        <a class="nav-link text-white" href="./form.php">Dashboard</a>
+        <a class="nav-link text-white " href="./form.php">Dashboard</a>
       </li>
+      <li class="nav-item">
+                <a class="nav-link  text-white" href="./updateFAQ.php">Menu_update</a>
+            </li>
       <li class="nav-item">
         <a class="nav-link text-white" href="./summary.php">Summary</a>
       </li>
@@ -131,6 +134,7 @@ if (!isset($_SESSION["user"])) {
       </div>
     </div>
   </div>
+  
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
