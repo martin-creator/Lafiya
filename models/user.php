@@ -59,7 +59,7 @@ class User
         $this->getAge(),
         $this->getPhone(),
       ]);
-      echo "You have been successfully  been registered \n";
+      // echo "You have been successfully  been registered \n";
     } catch (PDOException $e) {
       echo $e->getMessage();
     }

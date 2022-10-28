@@ -71,7 +71,7 @@ class Menu
       $user = new User($phoneNumber);
       $user->setUserHealthCondition($name, $age,$pdo, $healthcondition);
 
-      $response = "CON You  have choosen the topic on diabetes \n";
+      $response = "CON You have been successfully  been registered. You  have choosen the topic on diabetes \n";
 
       $response .= Util::$GO_TO_MAIN_MENU . " " . "Main Menu\n";
 
@@ -83,7 +83,7 @@ class Menu
       $user = new User($phoneNumber);
       $user->setUserHealthCondition($name, $age,$pdo, $healthcondition);
 
-      $response = "CON You  have choosen the topic on hypertension\n";
+      $response = "CON You have been successfully  been registered. You  have choosen the topic on hypertension\n";
 
       $response .= Util::$GO_TO_MAIN_MENU . " " . "Main Menu\n";
 
@@ -94,7 +94,7 @@ class Menu
       $healthcondition = "Depression";
       $user = new User($phoneNumber);
       $user->setUserHealthCondition($name, $age,$pdo, $healthcondition);
-      $response = "CON You  have choosen the topic on depression\n";
+      $response = "CON You have been successfully  been registered. You  have choosen the topic on depression\n";
 
       $response .= Util::$GO_TO_MAIN_MENU . " " . "Main Menu\n";
 
@@ -106,7 +106,7 @@ class Menu
       $user = new User($phoneNumber);
       $user->setUserHealthCondition($name, $age,$pdo, $healthcondition);
 
-      $response = "CON You  have choosen the topic on cancer\n";
+      $response = "CON You have been successfully  been registered. You  have choosen the topic on cancer\n";
 
       $response .= Util::$GO_TO_MAIN_MENU . " " . "Main Menu\n";
 
@@ -118,7 +118,7 @@ class Menu
       $user = new User($phoneNumber);
       $user->setUserHealthCondition($name, $age,$pdo, $healthcondition);
       
-      $response = "CON You  have choosen the topic on stroke\n";
+      $response = "CON You have been successfully  been registered. You  have choosen the topic on stroke\n";
 
       $response .= Util::$GO_TO_MAIN_MENU . " " . "Main Menu\n";
 
