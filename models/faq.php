@@ -141,7 +141,7 @@ class FAQ
     $stmt = $pdo->prepare("SELECT answer FROM faqs WHERE fid=?");
     $stmt->execute([$fid]);
     $row = $stmt->fetch();
-    return $row["question"];
+    return $row["answer"];
   }
 
 }

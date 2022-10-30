@@ -72,21 +72,7 @@ echo $question1 . " " . $answer1;
 
 
 
-// $sms = new Sms($phoneNumber);
 
-// $response = $sms->sendSMS($message, $phoneNumber);
-
-// if ($response["status"] == "success") {
-//   echo '<script type="text/JavaScript">
-//     window.location.href="http:/Lafayi/views/form.html";
-//      alert("Your message was delivered successfully");
-//      </script>';
-// } else {
-//   echo '<script type="text/JavaScript">
-//     window.location.href="http:/Lafayi/views/form.html";
-//      alert("Your message delivery failed!");
-//      </script>';
-// }
 
 
 ?>

@@ -1,5 +1,6 @@
 <?php
 include_once "../models/db.php";
+include_once "../models/diseases.php";
 session_start();
 
 if (!isset($_SESSION["user"])) {
@@ -174,6 +175,20 @@ if (!isset($_SESSION["user"])) {
               <button class="btn btn-primary">Save Changes</button>
             </div>
               </form>
+              <?php
+
+      $sql = $pdo->prepare("SELECT disease FROM diseasename"); $sql->execute();
+             $fetch = $sql->fetchAll(); ?>
+              <div class="container mt-4">
+                <div class="card">
+                  <div class="card-body">
+                  <p class="card-title"> Available Diseases </p>
+                  <div class="card-text">  <?php  echo json_encode($fetch) ?></div>
+                  </div>
+                 
+                </div>
+                
+              </div>
             </div>
           </div>
         </div>

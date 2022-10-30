@@ -230,6 +230,20 @@ if (!isset($_SESSION["user"])) {
               <button class="btn btn-primary">Save Changes</button>
             </div>
               </form>
+              <?php
+
+$sql = $pdo->prepare("SELECT question, answer FROM faqs"); $sql->execute();
+       $fetch = $sql->fetchAll(); ?>
+        <div class="container mt-4">
+          <div class="card">
+            <div class="card-body">
+            <p class="card-title"> Available FAQS </p>
+            <div class="card-text">  <?php  echo json_encode($fetch) ?></div>
+            </div>
+           
+          </div>
+          
+        </div>
             </div>
           </div>
         </div>
