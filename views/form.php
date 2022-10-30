@@ -1,6 +1,7 @@
 <?php
 include_once "../models/db.php";
 include_once '../models/gravatar.php';
+include_once '../models/diseases.php';
 session_start();
 
 if (!isset($_SESSION["user"])) {
@@ -51,6 +52,7 @@ if (!isset($_SESSION["user"])) {
       $sql->execute();
       $fetch = $sql->fetch();
       $gravatar = new Gravatar();
+      $disease = new Diseases();
       ?>
       <li class="nav-item">
           <img src="<?php echo $gravatar->get_gravatar($fetch["email"]); ?>" alt="image" />
@@ -109,11 +111,11 @@ if (!isset($_SESSION["user"])) {
             <div class="form-group">
               <label for="exampleFormControlSelect1">Health Condition</label>
               <select class="form-control" id="exampleFormControlSelect1" name="disease" required>
-                <option>Diabetes</option>
-                <option>Hypertention</option>
-                <option>Cancer</option>
-                <option>Stroke</option>
-                <option>Depression</option>
+                <option><?php echo $disease->readDisease1($pdo, 1) ?></option>
+                <option><?php echo $disease->readDisease2($pdo, 2) ?></option>
+                <option><?php echo $disease->readDisease3($pdo, 3) ?></option>
+                <option><?php echo $disease->readDisease4($pdo, 4) ?></option>
+                <option><?php echo $disease->readDisease5($pdo, 5) ?></option>
               </select>
             </div>
             <div class="form-group">
