@@ -35,7 +35,7 @@ class Diseases{
    
      public function setDisease2($disease2)
      {
-       $this->disease1 = $disease2;
+       $this->disease2 = $disease2;
      }
 
 
@@ -46,7 +46,7 @@ class Diseases{
    
      public function setDisease3($disease3)
      {
-       $this->disease1 = $disease3;
+       $this->disease3 = $disease3;
      }
 
 
@@ -57,7 +57,7 @@ class Diseases{
    
      public function setDisease4($disease4)
      {
-       $this->disease1 = $disease4;
+       $this->disease4 = $disease4;
      }
 
 
@@ -68,9 +68,12 @@ class Diseases{
    
      public function setDisease5($disease5)
      {
-       $this->disease1 = $disease5;
+       $this->disease5 = $disease5;
      }
 
+
+    
+    
 
 
 

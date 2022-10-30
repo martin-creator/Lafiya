@@ -2,25 +2,56 @@
 <?php
 
 include_once "../models/db.php";
-include_once "../models/sms.php";
+include_once "../models/diseases.php";
+
+
+$db = new DBConnector();
+$pdo = $db->connectToDB();
+
+
+if (
+    $_POST["disease1"] != "" || $_POST["disease2"] != "" || $_POST["disease3"] != "" || $_POST["disease4"] != "" || $_POST["disease5"] != "") {
+    try {
+
+        $disease1 =  $_POST["disease1"];
+
+        $disease2 =  $_POST["disease2"];
+        
+        $disease3 =  $_POST["disease3"];
+        
+        $disease4 =  $_POST["disease4"]; 
+        
+        $disease5 =  $_POST["disease5"];
+
+      // $stmt = $pdo->prepare("INSERT INTO diseasename(disease1, disease2, disease3, disease4, disease5) VALUES (?,?,?,?,?)");
+      $stmt = $pdo->prepare("UPDATE diseasename SET disease1=?, disease2=?, disease3=?, disease4=?, disease5=? WHERE hid=?");
+
+      $stmt->execute([$disease1, $disease2, $disease3, $disease4, $disease5, 1]);
+
+    } catch (PDOException $e) {
+
+      echo $e->getMessage();
+    }
+
+   
+
+    echo '<script type="text/JavaScript"> 
+    window.location.href="http://localhost/Lafayi/views/form.php";
+     alert("You have been succesfully saved your changes!");
+     </script>';
+
+  } else {
+    echo '<script type="text/JavaScript"> 
+  window.location.href="http://localhost/Lafayi/views/registration.php";
+   alert(" We could not save your chnages. Please try again!");
+   </script>';
+
+  }
 
 
 
-$disease1 =  $_POST["disease1"];
-
-$disease2 =  $_POST["disease2"];
-
-$disease3 =  $_POST["disease3"];
-
-$disease4 =  $_POST["disease4"]; 
-
-$disease5 =  $_POST["disease5"];
 
 
-echo $disease1
-
-// $db = new DBConnector();
-// $pdo = $db->connectToDB();
 
 // $sms = new Sms($phoneNumber);
 
