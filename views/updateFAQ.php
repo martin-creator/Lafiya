@@ -1,5 +1,6 @@
 <?php
 include_once "../models/db.php";
+include_once "../models/gravatar.php";
 session_start();
 
 if (!isset($_SESSION["user"])) {
@@ -54,7 +55,12 @@ if (!isset($_SESSION["user"])) {
       $id = $_SESSION["user"];
       $db = new DBConnector();
       $pdo = $db->connectToDB(); $sql = $pdo->prepare("SELECT * FROM admins
-          WHERE id = $id "); $sql->execute(); $fetch = $sql->fetch(); ?>
+          WHERE id = $id "); $sql->execute(); $fetch = $sql->fetch();
+           $gravatar = new Gravatar();
+            ?>
+            <li class="nav-item">
+          <img src="<?php echo $gravatar->get_gravatar($fetch["email"]); ?>" alt="image" />
+        </li>
           <li class="nav-item">
             <a class="nav-link text-white"><?php echo $fetch["username"]; ?></a>
           </li>
