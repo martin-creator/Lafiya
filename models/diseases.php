@@ -3,31 +3,26 @@
 class Diseases
 {
   //Diseases
-  static $disease1; //"Diabetes"
+  protected $disease1; //"Diabetes"
 
-  static $disease2; // "Hypertension"
+  protected $disease2; // "Hypertension"
 
-  static $disease3; //"Depression"
+  protected $disease3; //"Depression"
 
-  static $disease4; // "Cancer"
+  protected $disease4; // "Cancer"
 
-  static $disease5; //"Stroke"
+  protected $disease5; //"Stroke"
 
   //setter and getter
-
-  public function getDisease1()
-  {
-    return $this->disease1;
-  }
 
   public function setDisease1($disease1)
   {
     $this->disease1 = $disease1;
   }
 
-  public function getDisease2()
+  public function getDisease1()
   {
-    return $this->disease2;
+    return $this->disease1;
   }
 
   public function setDisease2($disease2)
@@ -35,9 +30,9 @@ class Diseases
     $this->disease2 = $disease2;
   }
 
-  public function getDisease3()
+  public function getDisease2()
   {
-    return $this->disease3;
+    return $this->disease2;
   }
 
   public function setDisease3($disease3)
@@ -45,14 +40,19 @@ class Diseases
     $this->disease3 = $disease3;
   }
 
-  public function getDisease4()
+  public function getDisease3()
   {
-    return $this->disease4;
+    return $this->disease3;
   }
 
   public function setDisease4($disease4)
   {
     $this->disease4 = $disease4;
+  }
+
+  public function getDisease4()
+  {
+    return $this->disease4;
   }
 
   public function getDisease5()
@@ -65,49 +65,50 @@ class Diseases
     $this->disease5 = $disease5;
   }
 
-  public function readDisease1($pdo)
+  public function readDisease1($pdo, $hid)
   {
-    $stmt = $pdo->prepare("SELECT disease1 FROM diseasename WHERE hid=?");
-    $stmt->execute([1]);
+    $stmt = $pdo->prepare("SELECT disease FROM diseasename WHERE hid=?");
+    $stmt->execute([$hid]);
     $row = $stmt->fetch();
-    return $row["disease1"];
+    $this->setDisease1($row["disease"]);
+    return $row["disease"];
   }
 
-  public function readDisease2($pdo)
+  public function readDisease2($pdo, $hid)
   {
-    $stmt = $pdo->prepare("SELECT disease2 FROM diseasename WHERE hid=?");
-    $stmt->execute([2]);
+    $stmt = $pdo->prepare("SELECT disease FROM diseasename WHERE hid=?");
+    $stmt->execute([$hid]);
     $row = $stmt->fetch();
-    return $row["disease2"];
+    $this->setDisease2($row["disease"]);
+    return $row["disease"];
   }
 
-  public function readDisease3($pdo)
+  public function readDisease3($pdo, $hid)
   {
-    $stmt = $pdo->prepare("SELECT disease3 FROM diseasename WHERE hid=?");
-    $stmt->execute([3]);
+    $stmt = $pdo->prepare("SELECT disease FROM diseasename WHERE hid=?");
+    $stmt->execute([$hid]);
     $row = $stmt->fetch();
-    return $row["disease3"];
+    $this->setDisease3($row["disease"]);
+    return $row["disease"];
   }
 
-
-  public function readDisease4($pdo)
+  public function readDisease4($pdo, $hid)
   {
-    $stmt = $pdo->prepare("SELECT disease4 FROM diseasename WHERE hid=?");
-    $stmt->execute([4]);
+    $stmt = $pdo->prepare("SELECT disease FROM diseasename WHERE hid=?");
+    $stmt->execute([$hid]);
     $row = $stmt->fetch();
-    return $row["disease4"];
+    $this->setDisease4($row["disease"]);
+    return $row["disease"];
   }
 
-  public function readDisease5($pdo)
+  public function readDisease5($pdo, $hid)
   {
-    $stmt = $pdo->prepare("SELECT disease5 FROM diseasename WHERE hid=?");
-    $stmt->execute([5]);
+    $stmt = $pdo->prepare("SELECT disease FROM diseasename WHERE hid=?");
+    $stmt->execute([$hid]);
     $row = $stmt->fetch();
-    return $row["disease5"];
+    $this->setDisease5($row["disease"]);
+    return $row["disease"];
   }
-
 }
-
-
 
 ?>

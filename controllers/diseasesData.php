@@ -23,10 +23,15 @@ if (
         
         $disease5 =  $_POST["disease5"];
 
-      // $stmt = $pdo->prepare("INSERT INTO diseasename(disease1, disease2, disease3, disease4, disease5) VALUES (?,?,?,?,?)");
-      $stmt = $pdo->prepare("UPDATE diseasename SET disease1=?, disease2=?, disease3=?, disease4=?, disease5=? WHERE hid=?");
+       //$stmt = $pdo->prepare("INSERT INTO diseasename(disease) VALUES (?)");
+      $stmt = $pdo->prepare("UPDATE diseasename SET disease=? WHERE hid=?");
 
-      $stmt->execute([$disease1, $disease2, $disease3, $disease4, $disease5, 1]);
+      $stmt->execute([$disease1, 1]);
+      $stmt->execute([$disease2, 2]);
+      $stmt->execute([$disease3, 3]);
+      $stmt->execute([$disease4, 4]);
+      $stmt->execute([$disease5, 5]);
+     
 
     } catch (PDOException $e) {
 

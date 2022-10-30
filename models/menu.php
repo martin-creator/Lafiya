@@ -6,6 +6,7 @@ include_once '../models/healthconditions.php';
 include_once '../models/subscriptionplan.php';
 include_once '../models/faq.php';
 include_once '../models/sms.php';
+include_once '../models/diseases.php';
 
 class Menu
 {
@@ -43,7 +44,7 @@ class Menu
   public function subscribeMenu($textArray, $phoneNumber, $pdo)
   {
     $level = count($textArray); // This counts number of items in array
-
+    $disease = new Diseases();
 
     if ($level == 1) {
       echo " CON Please enter your full name";
@@ -52,15 +53,15 @@ class Menu
     } elseif ($level == 3) {
       $response = "CON  Please select your health condition\n";
 
-      $response .= "1. Diabetes\n";
+      $response .= "1. ". $disease->readDisease1($pdo, 1) ."\n";
 
-      $response .= "2. Hypertension\n";
+      $response .= "2. ". $disease->readDisease2($pdo, 2) ."\n";
 
-      $response .= "3. Depression\n";
+      $response .= "3. " . $disease->readDisease3($pdo, 3) ."\n";
 
-      $response .= "4. Cancer\n";
+      $response .= "4. ". $disease->readDisease4($pdo, 4) ."\n";
 
-      $response .= "5. Stroke\n";
+      $response .= "5. ". $disease->readDisease5($pdo, 5) ."\n";
 
       echo $response;
       
@@ -70,8 +71,9 @@ class Menu
       $healthcondition = "Diabetes";
       $user = new User($phoneNumber);
       $user->setUserHealthCondition($name, $age,$pdo, $healthcondition);
+      $disease->readDisease1($pdo, 1) ;
 
-      $response = "CON You have been successfully  been registered. You  have choosen the topic on diabetes \n";
+      $response = "CON You have been successfully registered. You  have choosen the topic on ". $disease->getDisease1(). "\n";
 
       $response .= Util::$GO_TO_MAIN_MENU . " " . "Main Menu\n";
 
@@ -82,8 +84,9 @@ class Menu
       $healthcondition = "Hypertension";
       $user = new User($phoneNumber);
       $user->setUserHealthCondition($name, $age,$pdo, $healthcondition);
+      $disease->readDisease2($pdo, 2) ;
 
-      $response = "CON You have been successfully  been registered. You  have choosen the topic on hypertension\n";
+      $response = "CON You have been successfully registered. You  have choosen the topic on ". $disease->getDisease2(). "\n";
 
       $response .= Util::$GO_TO_MAIN_MENU . " " . "Main Menu\n";
 
@@ -94,7 +97,8 @@ class Menu
       $healthcondition = "Depression";
       $user = new User($phoneNumber);
       $user->setUserHealthCondition($name, $age,$pdo, $healthcondition);
-      $response = "CON You have been successfully  been registered. You  have choosen the topic on depression\n";
+      $disease->readDisease3($pdo, 3); 
+      $response = "CON You have been successfully registered. You  have choosen the topic on ". $disease->getDisease3() ."\n";
 
       $response .= Util::$GO_TO_MAIN_MENU . " " . "Main Menu\n";
 
@@ -105,8 +109,9 @@ class Menu
       $healthcondition = "Cancer";
       $user = new User($phoneNumber);
       $user->setUserHealthCondition($name, $age,$pdo, $healthcondition);
+      $disease->readDisease4($pdo, 4); 
 
-      $response = "CON You have been successfully  been registered. You  have choosen the topic on cancer\n";
+      $response = "CON You have been successfully registered. You  have choosen the topic on". $disease->getDisease4() ."\n";
 
       $response .= Util::$GO_TO_MAIN_MENU . " " . "Main Menu\n";
 
@@ -117,8 +122,9 @@ class Menu
       $healthcondition = "Stroke";
       $user = new User($phoneNumber);
       $user->setUserHealthCondition($name, $age,$pdo, $healthcondition);
+      $disease->readDisease5($pdo, 5) ;
       
-      $response = "CON You have been successfully  been registered. You  have choosen the topic on stroke\n";
+      $response = "CON You have been successfully registered. You  have choosen the topic on ". $disease->getDisease5() ."\n";
 
       $response .= Util::$GO_TO_MAIN_MENU . " " . "Main Menu\n";
 
