@@ -7,6 +7,8 @@ include_once '../models/subscriptionplan.php';
 include_once '../models/faq.php';
 include_once '../models/sms.php';
 include_once '../models/diseases.php';
+include_once '../models/faq.php';
+include_once '../models/subscription_prices.php';
 
 class Menu
 {
@@ -138,15 +140,16 @@ class Menu
   public function subscriptionPlan($textArray, $sessionId, $phoneNumber, $user, $pdo)
   {
     $level = count($textArray);
+    $price = new Price();
 
     if ($level == 1) {
       $response = "CON  Please select your Subscription Plan\n";
 
-      $response .= "1. Daily (10)\n";
+      $response .= "1. Daily ". $price->readPrice($pdo, 1)."\n";
 
-      $response .= "2. Weekly (15)\n";
+      $response .= "2. Weekly ". $price->readPrice($pdo, 2)."\n";
 
-      $response .= "3. Monthly(30)\n";
+      $response .= "3. Monthly ". $price->readPrice($pdo, 3)."\n";
 
       echo $response;
     } elseif ($level == 2 && $textArray[1] == 1) {
@@ -193,29 +196,30 @@ class Menu
     }
   }
 
-  public function viewFAQs($textArray, $user)
+  public function viewFAQs($textArray, $user, $pdo)
   {
     $level = count($textArray);
+    $faq = new FAQ();
 
     if ($level == 1) {
       $response = "CON  Please select your question\n";
 
-      $response .= "1. Foods with low Cholesterol levels \n";
+      $response .= "1. ". $faq->readQuestion($pdo, 1) ."\n";
 
-      $response .= "2. Is cancer a communicable disease? \n";
+      $response .= "2. ". $faq->readQuestion($pdo, 2)."\n";
 
-      $response .= "3. What is depression? how is it different from stress?\n";
+      $response .= "3. ".$faq->readQuestion($pdo, 3)."\n";
 
-      $response .= "4. What are the early stages of hypertension?\n";
+      $response .= "4. ".$faq->readQuestion($pdo, 4)."\n";
 
-      $response .= "5. What are the causes of heart attack\n";
+      $response .= "5. ".$faq->readQuestion($pdo, 5)."\n";
 
       $response .= Util::$GO_TO_MAIN_MENU . " " . "Main Menu\n";
 
       echo $response;
     } elseif ($level == 2 && $textArray[1] == 1) {
       $response = "CON You will receive the answer to your question via SMS shortly\n";
-      $msg =  FAQ::$Question1;
+      $msg =  $faq->readAnswer($pdo, 1);
       $sms = new Sms($user->getPhone());
                 $result = $sms->sendSMS($msg, $user->getPhone());
       $response .=  Util::$GO_BACK . " " . "GO BACK \n";
@@ -223,14 +227,14 @@ class Menu
 
     } elseif ($level == 2 && $textArray[1] == 2) {
       $response = "CON You will receive the answer to your question via SMS shortly\n";
-      $msg =  FAQ::$Question2;
+      $msg =  $faq->readAnswer($pdo, 2);
       $sms = new Sms($user->getPhone());
                 $result = $sms->sendSMS($msg, $user->getPhone());
       $response .= Util::$GO_BACK . " " . "GO BACK \n";
       echo $response;
     } elseif ($level == 2 && $textArray[1] == 3) {
       $response = "CON You will receive the answer to your question via SMS shortly\n";
-      $msg =  FAQ::$Question3;
+      $msg =  $faq->readAnswer($pdo, 3);
       $sms = new Sms($user->getPhone());
                 $result = $sms->sendSMS($msg, $user->getPhone());
       $response .= Util::$GO_BACK . " " . "GO BACK \n";
@@ -238,7 +242,7 @@ class Menu
 
     } elseif ($level == 2 && $textArray[1] == 4) {
       $response = "CON You will receive the answer to your question via SMS shortly\n";
-      $msg =  FAQ::$Question4;
+      $msg =  $faq->readAnswer($pdo, 4);
       $sms = new Sms($user->getPhone());
                 $result = $sms->sendSMS($msg, $user->getPhone());
       $response .= Util::$GO_BACK . " " . "GO BACK \n";
@@ -246,7 +250,7 @@ class Menu
 
     } elseif ($level == 2 && $textArray[1] == 5) {
       $response = "CON You will receive the answer to your question via SMS shortly\n";
-      $msg =  FAQ::$Question5;
+      $msg =  $faq->readAnswer($pdo, 5);
       $sms = new Sms($user->getPhone());
                 $result = $sms->sendSMS($msg, $user->getPhone());
       $response .= Util::$GO_BACK . " " . "GO BACK \n";

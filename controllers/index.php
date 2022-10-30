@@ -42,7 +42,7 @@ if ($text == "" && $user->isUserRegistered($pdo)) {
       );
       break;
     case 2:
-      $menu->viewFAQs($textArray, $user);
+      $menu->viewFAQs($textArray, $user, $pdo);
       break;
     case 3:
       $menu->unSubscribe($textArray, $user, $pdo);

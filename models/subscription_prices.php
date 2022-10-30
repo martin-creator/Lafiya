@@ -1,6 +1,6 @@
 <?php 
 
-class Diseases{
+class Price{
 
     //Prices
     static $dailyPrice;
