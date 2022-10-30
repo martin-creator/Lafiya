@@ -127,6 +127,23 @@ class FAQ
   {
     $this->Answer5 = $Answer5;
   }
+
+  public function readQuestion($pdo,$fid)
+  {
+    $stmt = $pdo->prepare("SELECT question FROM faqs WHERE fid=?");
+    $stmt->execute([$fid]);
+    $row = $stmt->fetch();
+    return $row["question"];
+  }
+
+  public function readAnswer($pdo, $fid)
+  {
+    $stmt = $pdo->prepare("SELECT answer FROM faqs WHERE fid=?");
+    $stmt->execute([$fid]);
+    $row = $stmt->fetch();
+    return $row["question"];
+  }
+
 }
 
 ?>

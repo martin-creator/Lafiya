@@ -43,6 +43,14 @@ class Diseases{
       $this->monthlyPrice = $monthlyPrice;
     }
 
+    public function readPrice($pdo, $sid)
+  {
+    $stmt = $pdo->prepare("SELECT price FROM subprices WHERE sid=?");
+    $stmt->execute([$sid]);
+    $row = $stmt->fetch();
+    return $row["price"];
+  }
+
 }
 
 
