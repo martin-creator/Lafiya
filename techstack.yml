@@ -2,7 +2,7 @@ repo_name: martin-creator/Lafiya
 report_id: dfc28142ebeac63b6a4ceaaeeb75e5a3
 version: 0.1
 repo_type: Public
-timestamp: '2024-02-04T08:04:12+00:00'
+timestamp: '2024-02-29T19:51:33+00:00'
 requested_by: martin-creator
 provider: github
 branch: master
@@ -51,7 +51,7 @@ tools:
   detection_source_url: https://github.com/martin-creator/Lafiya
   detection_source: Repo Metadata
 - name: Prettier
-  description: 'Prettier is an opinionated code formatter. '
+  description: Prettier is an opinionated code formatter.
   website_url: https://prettier.io/
   version: 2.7.1
   license: MIT
